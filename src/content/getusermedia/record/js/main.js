@@ -11,6 +11,8 @@
 
 'use strict';
 
+document.write("202207211949");
+
 /* globals MediaRecorder */
 
 let mediaRecorder;
@@ -82,7 +84,7 @@ function getSupportedMimeTypes() {
 
 function startRecording() {
   recordedBlobs = [];
-  const mimeType = codecPreferences.options[codecPreferences.selectedIndex].value;
+  const mimeType = codecPreferences.options[codecPreferences.selectedIndex].value || "video/mp4";
   const options = {mimeType};
 
   try {
